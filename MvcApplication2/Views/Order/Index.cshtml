@@ -1,0 +1,95 @@
+﻿@model IEnumerable<MvcApplication2.Models.Order>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Your Order</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table>
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.Name)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Email)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Mobile_Model)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Address)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Phone_Number)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.Name)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Email)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Mobile_Model)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Address)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Phone_Number)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { id=item.id }) |
+            @Html.ActionLink("Details", "Details", new { id=item.id }) |
+            @Html.ActionLink("Delete", "Delete", new { id=item.id })
+        </td>
+    </tr>
+}
+
+</table>
+
+<p>you only can see it</p>
+
+<div class="row">
+    <div class="column">
+        <img src="~/Images/samsung.jpg" style="width:100%" height="360">Samsung Rs:12000/-
+    </div>
+    <div class="column">
+        <img src="~/Images/apple.jpg" style="width:100%" height="360">Apple iphone5 Rs:30000/-
+    </div>
+    <div class="column">
+        <img src="~/Images/iphoneX.jpg" style="width:100%" height="360">IphoneX Rs:52000/-
+    </div>
+    <div class="column">
+        <img src="~/Images/samsung j7.jpg" style="width:100%" height="360">Samsung J7 Rs:19000/-
+    </div>
+    <div class="column">
+        <img src="~/Images/iphone 7.jpg" style="width:100%" height="360">Iphone7 Rs:60000/-
+    </div>
+    <div class="column">
+        <img src="~/Images/redminote4.jpeg" style="width:100%" height="360">Redminote4 Rs:12000/-
+    </div>
+    <div class="column">
+        <img src="~/Images/redmi5a.jpeg" style="width:100%" height="360">Redmi5A Rs:6000/-
+    </div>
+    <div class="column">
+        <img src="~/Images/lava A52.jpeg" style="width:100%" height="360">Lava  A52 Rs:12000/-
+    </div>
+    <div class="column">
+        <img src="~/Images/lavaz90.jpg" style="width:100%" height="360">Lava z90 Rs:12000/-
+    </div>
+    <div class="column">
+        <img src="~/Images/nokia_7_plus-ROW-black.png" style="width:100%" height="360">Nokia 7 plus Rs:32000/-
+    </div>
+    <div class="column">
+        <img src="~/Images/nokiaXL.jpg" style="width:100%" height="360">NokiXL Rs:40000/-
+    </div>
+</div>

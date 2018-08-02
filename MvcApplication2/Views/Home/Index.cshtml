@@ -1,0 +1,53 @@
+﻿@{
+    ViewBag.Title = "Home Page";
+}
+@section featured {
+   <section class="featured">
+    <div class="content-wrapper">
+        <hgroup class="title"></hgroup>
+    </div>
+    <div id="wrapper">
+        <a href="https://www.facebook.com/"><div class="box" id="facebook">&#62220;</div></a>
+        <a href="https://twitter.com/login?lang=en"><div class="box" id="twitter">&#62217;</div></a>
+        <a href="https://www.google.co.in"><div class="box" id="google">&#62223;</div></a>
+        <a href="https://www.linkedin.com/start/join"><div class="box" id="linkedin">&#62232;</div></a>
+    </div>
+</section>
+}
+<h1 class="neon" data-loading-text="welcome to our mobile shop">welcome to our mobile shop</h1>
+
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+
+<div class="w3-content w3-display-container">
+    <img class="mySlides" src="~/Images/yuyurkeaplus_big.jpg" style="width:100%" height="460">
+    <img class="mySlides" src="~/Images/4501_Xolo-Page_1500-PX-W06012016_03.jpg" style="width:100%" height="460">
+    <img class="mySlides" src="~/Images/c8ed395722e16d7ad662b3bb0740f35ddc481746.jpeg" style="width:100%" height="460">
+    <img class="mySlides" src="~/Images/Cherry-Mobile-Touch-HD-specs-price.jpg" style="width:100%" height="460">
+   
+    
+
+    <button class="w3-button w3-black w3-display-left" onclick="plusDivs(-1)">&#10094;</button>
+    <button class="w3-button w3-black w3-display-right" onclick="plusDivs(1)">&#10095;</button>
+</div>
+
+<script>
+        var slideIndex = 1;
+        showDivs(slideIndex);
+
+        function plusDivs(n) {
+            showDivs(slideIndex += n);
+        }
+
+        function showDivs(n) {
+            var i;
+            var x = document.getElementsByClassName("mySlides");
+            if (n > x.length) { slideIndex = 1 }
+            if (n < 1) { slideIndex = x.length }
+            for (i = 0; i < x.length; i++) {
+                x[i].style.display = "none";
+            }
+            x[slideIndex - 1].style.display = "block";
+        }
+</script>
+
